@@ -1,0 +1,106 @@
+[
+    {
+        "merged": "site.barid.app-release-37:/layout_inbox.xml.flat",
+        "source": "site.barid.app-main-38:/layout/inbox.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-release-37:\\layout_settings.xml.flat",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-38:\\layout\\settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-release-37:\\layout_view.xml.flat",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-38:\\layout\\view.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-release-37:\\drawable_logo_new.xml.flat",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-38:\\drawable\\logo_new.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-release-37:\\drawable_ic_stat_notify_email.xml.flat",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-38:\\drawable\\ic_stat_notify_email.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-release-37:\\layout_inbox.xml.flat",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-38:\\layout\\inbox.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-release-37:\\layout_main.xml.flat",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-38:\\layout\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-release-37:\\drawable_ic_email.xml.flat",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-38:\\drawable\\ic_email.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-release-37:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-38:\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-release-37:\\drawable_background_circle.xml.flat",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-38:\\drawable\\background_circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-release-37:\\layout_item_account.xml.flat",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-38:\\layout\\item_account.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-release-37:\\drawable_ic_add.xml.flat",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-38:\\drawable\\ic_add.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-release-37:\\drawable_bg_search_bar.xml.flat",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-38:\\drawable\\bg_search_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-release-37:\\drawable_ic_delete.xml.flat",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-38:\\drawable\\ic_delete.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-release-37:\\layout_main2.xml.flat",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-38:\\layout\\main2.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-release-37:\\drawable_starry_background.xml.flat",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-38:\\drawable\\starry_background.xml"
+    },
+    {
+        "merged": "site.barid.app-release-37:/color_selector_bottom_nav.xml.flat",
+        "source": "site.barid.app-main-38:/color/selector_bottom_nav.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-release-37:\\layout_dialog_ios.xml.flat",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-38:\\layout\\dialog_ios.xml"
+    },
+    {
+        "merged": "site.barid.app-release-37:/menu_bottom_nav_menu.xml.flat",
+        "source": "site.barid.app-main-38:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-release-37:\\drawable_ic_settings.xml.flat",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-38:\\drawable\\ic_settings.xml"
+    },
+    {
+        "merged": "site.barid.app-release-37:/layout_emails.xml.flat",
+        "source": "site.barid.app-main-38:/layout/emails.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-release-37:\\layout_bs_accounts.xml.flat",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-38:\\layout\\bs_accounts.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-release-37:\\layout_emails.xml.flat",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-38:\\layout\\emails.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-release-37:\\drawable_bg_ios_dialog.xml.flat",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-38:\\drawable\\bg_ios_dialog.xml"
+    },
+    {
+        "merged": "site.barid.app-release-37:/drawable_indicator_dot.xml.flat",
+        "source": "site.barid.app-main-38:/drawable/indicator_dot.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-release-37:\\drawable-xhdpi_default_image.png.flat",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-38:\\drawable-xhdpi\\default_image.png"
+    }
+]

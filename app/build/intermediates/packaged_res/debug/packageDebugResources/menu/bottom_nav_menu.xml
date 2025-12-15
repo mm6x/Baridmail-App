@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_inbox"
+        android:icon="@drawable/ic_email"
+        android:title="Inbox" />
+
+    <item
+        android:id="@+id/nav_add_account"
+        android:icon="@drawable/ic_add"
+        android:title="Add Account" />
+        
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings" />
+</menu>
