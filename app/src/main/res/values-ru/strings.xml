@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name" translatable="false">Barid Mail</string>
+    <string name="inbox">Входящие</string>
+    <string name="search_hint">Поиск почты</string>
+    <string name="empty_inbox_title">Пусто</string>
+    <string name="empty_inbox_msg">Все готово</string>
+    <string name="tap_to_view">Нажмите для деталей</string>
+    <string name="now">Сейчас</string>
+    <string name="add_account">Добавить аккаунт</string>
+    <string name="settings_title">Настройки</string>
+    <string name="appearance_title">Оформление</string>
+    <string name="language_title">Язык</string>
+    <string name="about_title">О приложении</string>
+    <string name="visit">Посетить</string>
+    <string name="version_text">Версия: v0.1</string>
+    <string name="theme_light">Светлая тема</string>
+    <string name="theme_dark">Темная тема</string>
+    <string name="dialog_clear_title">Очистить</string>
+    <string name="dialog_clear_msg">Удалить все письма?</string>
+    <string name="dialog_delete">Удалить все</string>
+    <string name="dialog_cancel">Отмена</string>
+    <string name="error_parsing">Ошибка обработки</string>
+    <string name="error_opening">Ошибка открытия</string>
+    <string name="success_cleared">Ящик очищен.</string>
+    <string name="success_account_restored">Аккаунт восстановлен</string>
+    <string name="select_language">Выберите язык</string>
+    <string name="login_title">С возвращением</string>
+    <string name="login_subtitle">Войдите в свою временную почту</string>
+    <string name="hint_username">Имя пользователя</string>
+    <string name="btn_login">Войти</string>
+    <string name="error_username_required">Требуется имя пользователя</string>
+
+    <string name="about_github">Github</string>
+    <string name="about_api">API Временной почты</string>
+    <string name="lang_en">Английский</string>
+</resources>

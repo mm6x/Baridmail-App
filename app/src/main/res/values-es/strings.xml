@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name" translatable="false">Barid Mail</string>
+    <string name="inbox">Bandeja</string>
+    <string name="search_hint">Buscar correo</string>
+    <string name="empty_inbox_title">Vacío</string>
+    <string name="empty_inbox_msg">Todo listo</string>
+    <string name="tap_to_view">Tocar para ver detalles</string>
+    <string name="now">Ahora</string>
+    <string name="add_account">Añadir cuenta</string>
+    <string name="settings_title">Ajustes</string>
+    <string name="appearance_title">Apariencia</string>
+    <string name="language_title">Idioma</string>
+    <string name="about_title">Acerca de</string>
+    <string name="visit">Visitar</string>
+    <string name="version_text">Versión: v0.1</string>
+    <string name="theme_light">Modo Claro</string>
+    <string name="theme_dark">Modo Oscuro</string>
+    <string name="dialog_clear_title">Vaciar bandeja</string>
+    <string name="dialog_clear_msg">¿Borrar todos los correos?</string>
+    <string name="dialog_delete">Borrar todo</string>
+    <string name="dialog_cancel">Cancelar</string>
+    <string name="error_parsing">Error al analizar</string>
+    <string name="error_opening">Error al abrir</string>
+    <string name="success_cleared">Bandeja vaciada.</string>
+    <string name="success_account_restored">Cuenta restaurada</string>
+    <string name="select_language">Seleccionar idioma</string>
+    <string name="login_title">Bienvenido de nuevo</string>
+    <string name="login_subtitle">Inicia sesión en tu correo temporal</string>
+    <string name="hint_username">Usuario</string>
+    <string name="btn_login">Acceder</string>
+    <string name="error_username_required">Usuario requerido</string>
+
+    <string name="about_github">Github</string>
+    <string name="about_api">API de correo temporal</string>
+    <string name="lang_en">Inglés</string>
+</resources>

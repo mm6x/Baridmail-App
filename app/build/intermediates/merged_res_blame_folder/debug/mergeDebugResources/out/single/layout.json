@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-mergeDebugResources-36:\\layout\\bs_language.xml",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-39:\\layout\\bs_language.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-mergeDebugResources-36:\\layout\\item_account.xml",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-39:\\layout\\item_account.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-mergeDebugResources-36:\\layout\\main2.xml",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-39:\\layout\\main2.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-mergeDebugResources-36:\\layout\\dialog_ios.xml",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-39:\\layout\\dialog_ios.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-mergeDebugResources-36:\\layout\\main.xml",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-39:\\layout\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-mergeDebugResources-36:\\layout\\view.xml",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-39:\\layout\\view.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-mergeDebugResources-36:\\layout\\inbox.xml",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-39:\\layout\\inbox.xml"
+    },
+    {
+        "merged": "site.barid.app-mergeDebugResources-36:/layout/main.xml",
+        "source": "site.barid.app-main-39:/layout/main.xml"
+    },
+    {
+        "merged": "site.barid.app-mergeDebugResources-36:/layout/settings.xml",
+        "source": "site.barid.app-main-39:/layout/settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-mergeDebugResources-36:\\layout\\bs_accounts.xml",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-39:\\layout\\bs_accounts.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-mergeDebugResources-36:\\layout\\settings.xml",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-39:\\layout\\settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-mergeDebugResources-36:\\layout\\emails.xml",
+        "source": "C:\\Users\\mhamad\\.gradle\\daemon\\9.0-milestone-1\\site.barid.app-main-39:\\layout\\emails.xml"
+    }
+]

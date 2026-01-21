@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name" translatable="false">Barid Mail</string>
+
+    <!-- General -->
+    <string name="inbox">INBOX</string>
+    <string name="search_hint">Search in mail</string>
+    <string name="empty_inbox_title">Empty</string>
+    <string name="empty_inbox_msg">All done</string>
+    <string name="tap_to_view">Tap to view message details</string>
+    <string name="now">Now</string>
+    
+    <!-- Settings -->
+    <string name="add_account">Add Account</string>
+    <string name="settings_title">Settings</string>
+    <string name="appearance_title">Appearance Mode</string>
+    <string name="language_title">Language</string>
+    <string name="about_title">About</string>
+    <string name="visit">Visit</string>
+    <string name="version_text">App version: v0.1</string>
+    
+    <!-- Theme -->
+    <string name="theme_light">White Mode</string>
+    <string name="theme_dark">Dark Mode</string>
+    
+    <!-- Dialogs -->
+    <string name="dialog_clear_title">Clear Inbox</string>
+    <string name="dialog_clear_msg">Are you sure you want to delete all emails?</string>
+    <string name="dialog_delete">Delete All</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="error_parsing">Error parsing response</string>
+    <string name="error_opening">Error opening email</string>
+    <string name="success_cleared">Inbox cleared.</string>
+    <string name="success_account_restored">Restored saved account</string>
+
+    <!-- Language Names -->
+    <string name="lang_en">English</string>
+    <string name="lang_ar">العربية</string>
+    <string name="lang_de">Deutsch</string>
+    <string name="lang_es">Español</string>
+    <string name="lang_ru">Русский</string>
+    <string name="select_language">Select Language</string>
+
+    <!-- Login -->
+    <string name="login_title">Welcome Back</string>
+    <string name="login_subtitle">Sign in to your Temp Mail</string>
+    <string name="hint_username">Username</string>
+    <string name="btn_login">Access Inbox</string>
+    <string name="error_username_required">Username required</string>
+    
+    <!-- About -->
+    <string name="about_github">Github</string>
+    <string name="about_api">Barid mail Api\'s</string>
+</resources>

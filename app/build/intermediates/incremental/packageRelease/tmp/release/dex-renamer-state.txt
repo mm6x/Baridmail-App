@@ -1,0 +1,10 @@
+#Sun Jan 04 08:16:38 EST 2026
+base.0=C\:\\Users\\mhamad\\Documents\\baridapp\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+base.1=C\:\\Users\\mhamad\\Documents\\baridapp\\app\\build\\intermediates\\global_synthetics_dex\\release\\mergeReleaseGlobalSynthetics\\classes.dex
+base.2=C\:\\Users\\mhamad\\Documents\\baridapp\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes2.dex
+path.0=classes.dex
+path.1=classes.dex
+path.2=classes2.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
+renamed.2=classes3.dex
