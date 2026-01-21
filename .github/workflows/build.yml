@@ -31,10 +31,10 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: app-release
-        path: app/release/app-release.apk
+        path: app/build/outputs/apk/release/*.apk
         
     - name: Upload AAB
       uses: actions/upload-artifact@v4
       with:
         name: app-bundle
-        path: app/release/app-release.aab
+        path: app/build/outputs/bundle/release/*.aab
