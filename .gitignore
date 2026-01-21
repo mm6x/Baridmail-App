@@ -17,6 +17,7 @@ local.properties
 misc.xml
 *.jks
 check_emails_worker_id.txt
+app/build/
+app/release/
 *.apk
 *.aab
-app/release/
