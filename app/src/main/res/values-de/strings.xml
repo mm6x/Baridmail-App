@@ -12,7 +12,7 @@
     <string name="language_title">Sprache</string>
     <string name="about_title">Über</string>
     <string name="visit">Besuchen</string>
-    <string name="version_text">Version: v0.1</string>
+    <string name="version_text">Version: v0.2</string>
     <string name="theme_light">Heller Modus</string>
     <string name="theme_dark">Dunkler Modus</string>
     <string name="dialog_clear_title">Posteingang leeren</string>

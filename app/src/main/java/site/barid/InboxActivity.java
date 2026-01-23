@@ -28,6 +28,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
+import android.widget.Spinner;
 import androidx.annotation.*;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -499,31 +500,54 @@ public class InboxActivity extends AppCompatActivity {
 		final SharedPreferences prefs = getSharedPreferences("app_settings", MODE_PRIVATE);
 		int currentMode = prefs.getInt("theme_mode", AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
         
-        final TextView btnDark = binding.getRoot().findViewById(R.id.btn_mode_dark);
-        final TextView btnLight = binding.getRoot().findViewById(R.id.btn_mode_light);
+        // Theme Spinner
+        final Spinner spinnerTheme = binding.getRoot().findViewById(R.id.spinner_theme);
         
-        // Initial State
-        updateThemeUI(currentMode, btnDark, btnLight);
+        String[] themeOptions = {
+            getString(R.string.theme_system),
+            getString(R.string.theme_light),
+            getString(R.string.theme_dark)
+        };
+        
+        ThemeSpinnerAdapter adapter = new ThemeSpinnerAdapter(this, themeOptions);
+        spinnerTheme.setAdapter(adapter);
+        
+        // Set current selection based on saved mode
+        int spinnerPosition = 0;
+        if (currentMode == AppCompatDelegate.MODE_NIGHT_YES) {
+            spinnerPosition = 2; // Dark Mode
+        } else if (currentMode == AppCompatDelegate.MODE_NIGHT_NO) {
+            spinnerPosition = 1; // Light Mode
+        } else {
+            spinnerPosition = 0; // Follow System (default)
+        }
+        spinnerTheme.setSelection(spinnerPosition);
+        
+        spinnerTheme.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                int mode;
+                switch (position) {
+                    case 0: // Follow System
+                        mode = AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM;
+                        break;
+                    case 1: // Light Mode
+                        mode = AppCompatDelegate.MODE_NIGHT_NO;
+                        break;
+                    case 2: // Dark Mode
+                        mode = AppCompatDelegate.MODE_NIGHT_YES;
+                        break;
+                    default:
+                        mode = AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM;
+                }
+                prefs.edit().putInt("theme_mode", mode).apply();
+                AppCompatDelegate.setDefaultNightMode(mode);
+            }
 
-		btnDark.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-                int mode = AppCompatDelegate.MODE_NIGHT_YES;
-				prefs.edit().putInt("theme_mode", mode).apply();
-				AppCompatDelegate.setDefaultNightMode(mode);
-                updateThemeUI(mode, btnDark, btnLight);
-			}
-		});
-
-        btnLight.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-                int mode = AppCompatDelegate.MODE_NIGHT_NO;
-				prefs.edit().putInt("theme_mode", mode).apply();
-				AppCompatDelegate.setDefaultNightMode(mode);
-                updateThemeUI(mode, btnDark, btnLight);
-			}
-		});
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
 		
         // Language Card Logic
         final TextView tvCurrentLang = binding.getRoot().findViewById(R.id.tv_current_language);
@@ -567,18 +591,5 @@ public class InboxActivity extends AppCompatActivity {
     private void showLanguageDialog() {
         LanguageBottomSheetFragment bottomSheet = new LanguageBottomSheetFragment();
         bottomSheet.show(getSupportFragmentManager(), "languageSheet");
-    }
-
-    private void updateThemeUI(int mode, TextView btnDark, TextView btnLight) {
-        int activeColor = getResources().getColor(R.color.brand_blue);
-        int inactiveColor = getResources().getColor(R.color.text_secondary);
-        
-        if (mode == AppCompatDelegate.MODE_NIGHT_YES) {
-            btnDark.setTextColor(activeColor);
-            btnLight.setTextColor(inactiveColor);
-        } else {
-            btnDark.setTextColor(inactiveColor);
-            btnLight.setTextColor(activeColor);
-        }
     }
 }

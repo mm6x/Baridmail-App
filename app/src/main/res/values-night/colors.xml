@@ -21,4 +21,6 @@
 	<color name="circle_placeholder">#3C4043</color>
 	<color name="nav_text">#9AA0A6</color>
 	<color name="nav_text_selected">#8AB4F8</color>
+	<!-- Dark blue cursor for dark mode -->
+	<color name="cursor_green">#2962FF</color>
 </resources>

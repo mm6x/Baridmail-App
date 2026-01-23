@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Dark mode theme overrides -->
+	<style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+		<!-- Cursor color: green in dark mode -->
+		<item name="colorControlActivated">@color/cursor_green</item>
+	</style>
+</resources>

@@ -16,11 +16,18 @@
     <string name="language_title">Language</string>
     <string name="about_title">About</string>
     <string name="visit">Visit</string>
-    <string name="version_text">App version: v0.1</string>
+    <string name="version_text">App version: v0.2</string>
     
     <!-- Theme -->
     <string name="theme_light">White Mode</string>
     <string name="theme_dark">Dark Mode</string>
+    <string name="theme_system">Follow System</string>
+    
+    <string-array name="theme_options">
+        <item>Follow System</item>
+        <item>Light Mode</item>
+        <item>Dark Mode</item>
+    </string-array>
     
     <!-- Dialogs -->
     <string name="dialog_clear_title">Clear Inbox</string>

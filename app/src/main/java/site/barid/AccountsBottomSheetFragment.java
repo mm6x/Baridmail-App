@@ -79,19 +79,25 @@ public class AccountsBottomSheetFragment extends BottomSheetDialogFragment {
 
             HashMap<String, Object> current = accountManager.getCurrentAccount();
             if (current != null && current.get("address").equals(address)) {
-                holder.ivCheck.setVisibility(View.VISIBLE);
+                // Show indicator for currently selected account
+                holder.ivIndicator.setVisibility(View.VISIBLE);
             } else {
-                holder.ivCheck.setVisibility(View.GONE);
+                holder.ivIndicator.setVisibility(View.GONE);
             }
 
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    accountManager.switchToAccount(position);
-                    // Reload Inbox
-                    Intent intent = new Intent(getContext(), InboxActivity.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity(intent);
+                    HashMap<String, Object> current = accountManager.getCurrentAccount();
+                    boolean isCurrentAccount = current != null && current.get("address").equals(address);
+                    
+                    if (!isCurrentAccount) {
+                        accountManager.switchToAccount(position);
+                        // Reload Inbox
+                        Intent intent = new Intent(getContext(), InboxActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
+                    }
                     dismiss();
                 }
             });
@@ -132,14 +138,14 @@ public class AccountsBottomSheetFragment extends BottomSheetDialogFragment {
 
         class ViewHolder extends RecyclerView.ViewHolder {
             TextView tvAvatar, tvEmail;
-            ImageView ivCheck, ivCopy;
+            ImageView ivCopy, ivIndicator;
 
             public ViewHolder(@NonNull View itemView) {
                 super(itemView);
                 tvAvatar = itemView.findViewById(R.id.tv_avatar);
                 tvEmail = itemView.findViewById(R.id.tv_email);
-                ivCheck = itemView.findViewById(R.id.iv_check);
                 ivCopy = itemView.findViewById(R.id.iv_copy);
+                ivIndicator = itemView.findViewById(R.id.iv_indicator);
             }
         }
     }
