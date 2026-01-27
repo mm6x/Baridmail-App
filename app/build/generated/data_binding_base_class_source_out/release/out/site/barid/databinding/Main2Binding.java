@@ -4,6 +4,7 @@ package site.barid.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -28,7 +29,13 @@ public final class Main2Binding implements ViewBinding {
   public final MaterialButton btnLogin;
 
   @NonNull
+  public final CheckBox cbProtected;
+
+  @NonNull
   public final TextInputEditText edittext1;
+
+  @NonNull
+  public final TextInputEditText etPassword;
 
   @NonNull
   public final ImageView logo;
@@ -40,20 +47,28 @@ public final class Main2Binding implements ViewBinding {
   public final TextInputLayout tilEmail;
 
   @NonNull
+  public final TextInputLayout tilPassword;
+
+  @NonNull
   public final TextView tvSubtitle;
 
   @NonNull
   public final TextView tvTitle;
 
   private Main2Binding(@NonNull ConstraintLayout rootView, @NonNull MaterialButton btnLogin,
-      @NonNull TextInputEditText edittext1, @NonNull ImageView logo, @NonNull Spinner spinner1,
-      @NonNull TextInputLayout tilEmail, @NonNull TextView tvSubtitle, @NonNull TextView tvTitle) {
+      @NonNull CheckBox cbProtected, @NonNull TextInputEditText edittext1,
+      @NonNull TextInputEditText etPassword, @NonNull ImageView logo, @NonNull Spinner spinner1,
+      @NonNull TextInputLayout tilEmail, @NonNull TextInputLayout tilPassword,
+      @NonNull TextView tvSubtitle, @NonNull TextView tvTitle) {
     this.rootView = rootView;
     this.btnLogin = btnLogin;
+    this.cbProtected = cbProtected;
     this.edittext1 = edittext1;
+    this.etPassword = etPassword;
     this.logo = logo;
     this.spinner1 = spinner1;
     this.tilEmail = tilEmail;
+    this.tilPassword = tilPassword;
     this.tvSubtitle = tvSubtitle;
     this.tvTitle = tvTitle;
   }
@@ -91,9 +106,21 @@ public final class Main2Binding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.cb_protected;
+      CheckBox cbProtected = ViewBindings.findChildViewById(rootView, id);
+      if (cbProtected == null) {
+        break missingId;
+      }
+
       id = R.id.edittext1;
       TextInputEditText edittext1 = ViewBindings.findChildViewById(rootView, id);
       if (edittext1 == null) {
+        break missingId;
+      }
+
+      id = R.id.et_password;
+      TextInputEditText etPassword = ViewBindings.findChildViewById(rootView, id);
+      if (etPassword == null) {
         break missingId;
       }
 
@@ -115,6 +142,12 @@ public final class Main2Binding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.til_password;
+      TextInputLayout tilPassword = ViewBindings.findChildViewById(rootView, id);
+      if (tilPassword == null) {
+        break missingId;
+      }
+
       id = R.id.tv_subtitle;
       TextView tvSubtitle = ViewBindings.findChildViewById(rootView, id);
       if (tvSubtitle == null) {
@@ -127,8 +160,8 @@ public final class Main2Binding implements ViewBinding {
         break missingId;
       }
 
-      return new Main2Binding((ConstraintLayout) rootView, btnLogin, edittext1, logo, spinner1,
-          tilEmail, tvSubtitle, tvTitle);
+      return new Main2Binding((ConstraintLayout) rootView, btnLogin, cbProtected, edittext1,
+          etPassword, logo, spinner1, tilEmail, tilPassword, tvSubtitle, tvTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

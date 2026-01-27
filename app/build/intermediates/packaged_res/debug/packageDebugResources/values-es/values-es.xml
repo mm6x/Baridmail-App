@@ -31,6 +31,6 @@
     <string name="tap_to_view">Tocar para ver detalles</string>
     <string name="theme_dark">Modo Oscuro</string>
     <string name="theme_light">Modo Claro</string>
-    <string name="version_text">Versión: v0.4</string>
+    <string name="version_text">Versión: v0.2</string>
     <string name="visit">Visitar</string>
 </resources>

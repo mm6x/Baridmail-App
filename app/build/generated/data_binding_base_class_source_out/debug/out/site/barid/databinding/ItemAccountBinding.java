@@ -21,10 +21,10 @@ public final class ItemAccountBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final ImageView ivCheck;
+  public final ImageView ivCopy;
 
   @NonNull
-  public final ImageView ivCopy;
+  public final ImageView ivIndicator;
 
   @NonNull
   public final TextView tvAvatar;
@@ -32,11 +32,11 @@ public final class ItemAccountBinding implements ViewBinding {
   @NonNull
   public final TextView tvEmail;
 
-  private ItemAccountBinding(@NonNull LinearLayout rootView, @NonNull ImageView ivCheck,
-      @NonNull ImageView ivCopy, @NonNull TextView tvAvatar, @NonNull TextView tvEmail) {
+  private ItemAccountBinding(@NonNull LinearLayout rootView, @NonNull ImageView ivCopy,
+      @NonNull ImageView ivIndicator, @NonNull TextView tvAvatar, @NonNull TextView tvEmail) {
     this.rootView = rootView;
-    this.ivCheck = ivCheck;
     this.ivCopy = ivCopy;
+    this.ivIndicator = ivIndicator;
     this.tvAvatar = tvAvatar;
     this.tvEmail = tvEmail;
   }
@@ -68,15 +68,15 @@ public final class ItemAccountBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.iv_check;
-      ImageView ivCheck = ViewBindings.findChildViewById(rootView, id);
-      if (ivCheck == null) {
-        break missingId;
-      }
-
       id = R.id.iv_copy;
       ImageView ivCopy = ViewBindings.findChildViewById(rootView, id);
       if (ivCopy == null) {
+        break missingId;
+      }
+
+      id = R.id.iv_indicator;
+      ImageView ivIndicator = ViewBindings.findChildViewById(rootView, id);
+      if (ivIndicator == null) {
         break missingId;
       }
 
@@ -92,7 +92,8 @@ public final class ItemAccountBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ItemAccountBinding((LinearLayout) rootView, ivCheck, ivCopy, tvAvatar, tvEmail);
+      return new ItemAccountBinding((LinearLayout) rootView, ivCopy, ivIndicator, tvAvatar,
+          tvEmail);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

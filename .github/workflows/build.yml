@@ -2,11 +2,11 @@ name: Build Android APK
 
 on:
   push:
-    branches: [ v0.1 ]
+    branches: [ main, v0.1 ]
     tags:
       - 'v*'
   pull_request:
-    branches: [ v0.1 ]
+    branches: [ main, v0.1 ]
   workflow_dispatch:
 
 jobs:

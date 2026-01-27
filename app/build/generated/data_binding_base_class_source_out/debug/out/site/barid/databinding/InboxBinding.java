@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -35,12 +36,6 @@ public final class InboxBinding implements ViewBinding {
   public final ImageView btnClearAll;
 
   @NonNull
-  public final TextView btnModeDark;
-
-  @NonNull
-  public final TextView btnModeLight;
-
-  @NonNull
   public final LinearLayout cardGithub;
 
   @NonNull
@@ -62,10 +57,10 @@ public final class InboxBinding implements ViewBinding {
   public final LinearLayout noemails;
 
   @NonNull
-  public final SwipeRefreshLayout swiperefreshlayout1;
+  public final Spinner spinnerTheme;
 
   @NonNull
-  public final ImageView switchIndicator;
+  public final SwipeRefreshLayout swiperefreshlayout1;
 
   @NonNull
   public final TextView textview2;
@@ -90,19 +85,16 @@ public final class InboxBinding implements ViewBinding {
 
   private InboxBinding(@NonNull CoordinatorLayout rootView,
       @NonNull BottomNavigationView bottomNavigation, @NonNull ImageView btnClearAll,
-      @NonNull TextView btnModeDark, @NonNull TextView btnModeLight,
       @NonNull LinearLayout cardGithub, @NonNull LinearLayout cardGithubYazan,
       @NonNull MaterialCardView cardLanguage, @NonNull EditText etSearch,
       @NonNull LinearLayout listlin, @NonNull ListView listview1, @NonNull LinearLayout noemails,
-      @NonNull SwipeRefreshLayout swiperefreshlayout1, @NonNull ImageView switchIndicator,
+      @NonNull Spinner spinnerTheme, @NonNull SwipeRefreshLayout swiperefreshlayout1,
       @NonNull TextView textview2, @NonNull Toolbar toolbar, @NonNull LinearLayout totallin,
       @NonNull TextView tvAvatarProfile, @NonNull TextView tvCurrentLanguage,
       @NonNull CoordinatorLayout viewInbox, @NonNull NestedScrollView viewSettings) {
     this.rootView = rootView;
     this.bottomNavigation = bottomNavigation;
     this.btnClearAll = btnClearAll;
-    this.btnModeDark = btnModeDark;
-    this.btnModeLight = btnModeLight;
     this.cardGithub = cardGithub;
     this.cardGithubYazan = cardGithubYazan;
     this.cardLanguage = cardLanguage;
@@ -110,8 +102,8 @@ public final class InboxBinding implements ViewBinding {
     this.listlin = listlin;
     this.listview1 = listview1;
     this.noemails = noemails;
+    this.spinnerTheme = spinnerTheme;
     this.swiperefreshlayout1 = swiperefreshlayout1;
-    this.switchIndicator = switchIndicator;
     this.textview2 = textview2;
     this.toolbar = toolbar;
     this.totallin = totallin;
@@ -160,18 +152,6 @@ public final class InboxBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btn_mode_dark;
-      TextView btnModeDark = ViewBindings.findChildViewById(rootView, id);
-      if (btnModeDark == null) {
-        break missingId;
-      }
-
-      id = R.id.btn_mode_light;
-      TextView btnModeLight = ViewBindings.findChildViewById(rootView, id);
-      if (btnModeLight == null) {
-        break missingId;
-      }
-
       id = R.id.card_github;
       LinearLayout cardGithub = ViewBindings.findChildViewById(rootView, id);
       if (cardGithub == null) {
@@ -214,15 +194,15 @@ public final class InboxBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.swiperefreshlayout1;
-      SwipeRefreshLayout swiperefreshlayout1 = ViewBindings.findChildViewById(rootView, id);
-      if (swiperefreshlayout1 == null) {
+      id = R.id.spinner_theme;
+      Spinner spinnerTheme = ViewBindings.findChildViewById(rootView, id);
+      if (spinnerTheme == null) {
         break missingId;
       }
 
-      id = R.id.switch_indicator;
-      ImageView switchIndicator = ViewBindings.findChildViewById(rootView, id);
-      if (switchIndicator == null) {
+      id = R.id.swiperefreshlayout1;
+      SwipeRefreshLayout swiperefreshlayout1 = ViewBindings.findChildViewById(rootView, id);
+      if (swiperefreshlayout1 == null) {
         break missingId;
       }
 
@@ -269,9 +249,9 @@ public final class InboxBinding implements ViewBinding {
       }
 
       return new InboxBinding((CoordinatorLayout) rootView, bottomNavigation, btnClearAll,
-          btnModeDark, btnModeLight, cardGithub, cardGithubYazan, cardLanguage, etSearch, listlin,
-          listview1, noemails, swiperefreshlayout1, switchIndicator, textview2, toolbar, totallin,
-          tvAvatarProfile, tvCurrentLanguage, viewInbox, viewSettings);
+          cardGithub, cardGithubYazan, cardLanguage, etSearch, listlin, listview1, noemails,
+          spinnerTheme, swiperefreshlayout1, textview2, toolbar, totallin, tvAvatarProfile,
+          tvCurrentLanguage, viewInbox, viewSettings);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

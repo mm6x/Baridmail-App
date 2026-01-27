@@ -31,6 +31,6 @@
     <string name="tap_to_view">Нажмите для деталей</string>
     <string name="theme_dark">Темная тема</string>
     <string name="theme_light">Светлая тема</string>
-    <string name="version_text">Версия: v0.4</string>
+    <string name="version_text">Версия: v0.2</string>
     <string name="visit">Посетить</string>
 </resources>

@@ -1,4 +1,4 @@
-#Sun Jan 04 08:16:38 EST 2026
+#Sun Jan 25 10:17:59 EST 2026
 base.0=C\:\\Users\\mhamad\\Documents\\baridapp\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
 base.1=C\:\\Users\\mhamad\\Documents\\baridapp\\app\\build\\intermediates\\global_synthetics_dex\\release\\mergeReleaseGlobalSynthetics\\classes.dex
 base.2=C\:\\Users\\mhamad\\Documents\\baridapp\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes2.dex

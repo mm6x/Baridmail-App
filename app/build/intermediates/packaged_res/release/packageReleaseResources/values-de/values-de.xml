@@ -31,6 +31,6 @@
     <string name="tap_to_view">Tippen für Details</string>
     <string name="theme_dark">Dunkler Modus</string>
     <string name="theme_light">Heller Modus</string>
-    <string name="version_text">Version: v0.1</string>
+    <string name="version_text">Version: v0.2</string>
     <string name="visit">Besuchen</string>
 </resources>

@@ -11,6 +11,7 @@
     <color name="colorControlNormal">#9AA0A6</color>
     <color name="colorPrimary">#121212</color>
     <color name="colorPrimaryDark">#000000</color>
+    <color name="cursor_green">#2962FF</color>
     <color name="divider">#3C4043</color>
     <color name="fab_bg">#303030</color>
     <color name="nav_text">#9AA0A6</color>
@@ -19,4 +20,8 @@
     <color name="text_header">#FFFFFF</color>
     <color name="text_primary">#E8EAED</color>
     <color name="text_secondary">#9AA0A6</color>
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+		
+		<item name="colorControlActivated">@color/cursor_green</item>
+	</style>
 </resources>

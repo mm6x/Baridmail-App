@@ -31,6 +31,6 @@
     <string name="tap_to_view">اضغط لعرض التفاصيل</string>
     <string name="theme_dark">وضع الليل</string>
     <string name="theme_light">وضع النهار</string>
-    <string name="version_text">الإصدار: v0.1</string>
+    <string name="version_text">الإصدار: v0.2</string>
     <string name="visit">زيارة</string>
 </resources>

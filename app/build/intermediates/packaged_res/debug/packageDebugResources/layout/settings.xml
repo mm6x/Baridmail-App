@@ -226,7 +226,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Barid App v0.4"
+                android:text="Barid App v0.2"
                 android:gravity="center"
                 android:layout_marginTop="32dp"
                 android:textColor="@color/text_secondary"

@@ -37,22 +37,23 @@
     </LinearLayout>
 
     <ImageView
+        android:id="@+id/iv_indicator"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/indicator_dot"
+        android:visibility="gone"
+        app:tint="@color/colorAccent" />
+
+    <ImageView
         android:id="@+id/iv_copy"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginEnd="12dp"
         android:src="@drawable/ic_content_copy"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:clickable="true"
         android:focusable="true"
         app:tint="@color/text_secondary" />
-
-    <ImageView
-        android:id="@+id/iv_check"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:src="@drawable/ic_email"
-        app:tint="@color/colorAccent"
-        android:visibility="gone" />
 
 </LinearLayout>
