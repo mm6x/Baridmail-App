@@ -16,7 +16,7 @@
     <string name="language_title">Language</string>
     <string name="about_title">About</string>
     <string name="visit">Visit</string>
-    <string name="version_text">App version: v0.2</string>
+    <string name="version_text">App version: v0.3</string>
     
     <!-- Theme -->
     <string name="theme_light">White Mode</string>
@@ -51,8 +51,12 @@
     <string name="login_title">Welcome Back</string>
     <string name="login_subtitle">Sign in to your Temp Mail</string>
     <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="cb_protected_inbox">Protected Inbox (Password)</string>
     <string name="btn_login">Access Inbox</string>
     <string name="error_username_required">Username required</string>
+    <string name="error_password_required">Password required for protected inbox</string>
+    <string name="error_auth_failed">Authentication failed. Check your password.</string>
     
     <!-- About -->
     <string name="about_github">Github</string>

@@ -67,30 +67,37 @@ public class EmailForegroundService extends Service {
 
                     for (HashMap<String, Object> account : accounts) {
                         String address = (String) account.get("address");
-                        String response = fetchUrl("https://api.barid.site/emails/count/" + address);
+                        String response = fetchUrl("https://api.barid.site/emails/" + address + "?limit=1");
                         JSONObject json = new JSONObject(response);
-                        JSONObject result = json.getJSONObject("result");
-                        int count = result.getInt("count");
+                        if (json.has("result")) {
+                            JSONObject result = json.getJSONObject("result");
+                            org.json.JSONArray items = result.getJSONArray("items");
+                            
+                            if (items.length() > 0) {
+                                JSONObject latest = items.getJSONObject(0);
+                                String currentId = latest.getString("id");
+                                String from = latest.getString("fromAddress");
+                                String subject = latest.optString("subject", "(No Subject)");
 
-                        int lastCount = 0;
-                        if (account.containsKey("last_count")) {
-                            lastCount = ((Double) account.get("last_count")).intValue();
-                        } else {
-                            lastCount = count;
-                            updateAccountCount(accountManager, accounts, account, count);
-                            continue;
-                        }
+                                String lastId = "";
+                                if (account.containsKey("last_email_id")) {
+                                    lastId = (String) account.get("last_email_id");
+                                } else {
+                                    // First time, just save current
+                                    updateAccountLastId(accountManager, accounts, account, currentId);
+                                    continue;
+                                }
 
-                        if (count > lastCount) {
-                            NotificationHelper.showNotification(
-                                getApplicationContext(),
-                                "New Email Received",
-                                "You have " + count + " emails in " + address,
-                                address.hashCode()
-                            );
-                            updateAccountCount(accountManager, accounts, account, count);
-                        } else if (count < lastCount) {
-                            updateAccountCount(accountManager, accounts, account, count);
+                                if (!currentId.equals(lastId)) {
+                                    NotificationHelper.showNotification(
+                                        getApplicationContext(),
+                                        "New Email from " + from,
+                                        subject,
+                                        address.hashCode()
+                                    );
+                                    updateAccountLastId(accountManager, accounts, account, currentId);
+                                }
+                            }
                         }
                     }
                 } catch (Exception e) {
@@ -100,15 +107,11 @@ public class EmailForegroundService extends Service {
         }).start();
     }
 
-    private void updateAccountCount(AccountManager mgr, ArrayList<HashMap<String, Object>> accounts, HashMap<String, Object> account, int newCount) {
+    private void updateAccountLastId(AccountManager mgr, ArrayList<HashMap<String, Object>> accounts, HashMap<String, Object> account, String lastId) {
         int index = accounts.indexOf(account);
         if (index != -1) {
-            account.put("last_count", (double) newCount);
+            account.put("last_email_id", lastId);
             mgr.updateAccount(index, account);
-            
-            // Wait, AccountManager saves to prefs which is thread-safe mostly but editing list might have race conditions
-            // Since this is a simple list, it's mostly fine for this scale. 
-            // Ideally we'd synchronize, but AccountManager method saves immediately.
         }
     }
 

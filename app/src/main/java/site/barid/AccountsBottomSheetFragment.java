@@ -79,7 +79,7 @@ public class AccountsBottomSheetFragment extends BottomSheetDialogFragment {
 
             HashMap<String, Object> current = accountManager.getCurrentAccount();
             if (current != null && current.get("address").equals(address)) {
-                // Show indicator for currently selected account
+                // Sho w indicator for currently selected account
                 holder.ivIndicator.setVisibility(View.VISIBLE);
             } else {
                 holder.ivIndicator.setVisibility(View.GONE);
