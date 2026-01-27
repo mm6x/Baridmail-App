@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
+import java.util.HashMap;
+import java.util.Map;
 import site.barid.databinding.ViewBinding;
 
 public class ViewActivity extends AppCompatActivity {
@@ -39,11 +41,25 @@ public class ViewActivity extends AppCompatActivity {
 			}
 			@Override
 			public void onErrorResponse(String _param1, String _param2) {
-				AppUtil.showMessage(ViewActivity.this, AppUtil.getFriendlyErrorMessage(ViewActivity.this, _param2));
+				if (_param2.contains("401") || _param2.toLowerCase().contains("unauthorized")) {
+					AppUtil.showIOSDialog(ViewActivity.this, "Authentication Failed", getString(R.string.error_auth_failed));
+				} else {
+					AppUtil.showMessage(ViewActivity.this, AppUtil.getFriendlyErrorMessage(ViewActivity.this, _param2));
+				}
 			}
 		};
 		
 		setupUI();
+	}
+
+	private void setPasswordHeader(RequestNetwork rn) {
+		AccountManager accountManager = new AccountManager(this);
+		HashMap<String, Object> account = accountManager.getCurrentAccount();
+		HashMap<String, Object> headers = new HashMap<>();
+		if (account != null && account.containsKey("password")) {
+			headers.put("x-inbox-password", account.get("password").toString());
+		}
+		rn.setHeaders(headers);
 	}
 	
 	private void setupUI() {
@@ -67,6 +83,7 @@ public class ViewActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				if (!id.isEmpty()) {
+					setPasswordHeader(requestNetwork);
 					requestNetwork.startRequestNetwork(RequestNetworkController.DELETE, "https://api.barid.site/inbox/" + id, "", _requestNetwork_request_listener);
 				}
 			}

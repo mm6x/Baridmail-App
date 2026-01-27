@@ -20,12 +20,16 @@ public class AccountManager {
         gson = new Gson();
     }
 
-    public void addAccount(String email, String domain) {
+    public void addAccount(String email, String domain, String password) {
         ArrayList<HashMap<String, Object>> accounts = getAccounts();
         
         // Check if exists
         for (HashMap<String, Object> acc : accounts) {
             if (acc.get("address").equals(email + domain)) {
+                if (password != null && !password.isEmpty()) {
+                    acc.put("password", password);
+                    updateAccount(accounts.indexOf(acc), acc);
+                }
                 switchToAccount(accounts.indexOf(acc));
                 return;
             }
@@ -35,6 +39,9 @@ public class AccountManager {
         newAccount.put("address", email + domain); // Full address
         newAccount.put("email_part", email);
         newAccount.put("domain_part", domain);
+        if (password != null && !password.isEmpty()) {
+            newAccount.put("password", password);
+        }
         newAccount.put("color", AppUtil.getRandom(0xFF100000, 0xFFFFFFFF));
         
         accounts.add(newAccount);
