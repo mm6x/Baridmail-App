@@ -84,7 +84,7 @@ public class ViewActivity extends AppCompatActivity {
 			public void onClick(View v) {
 				if (!id.isEmpty()) {
 					setPasswordHeader(requestNetwork);
-					requestNetwork.startRequestNetwork(RequestNetworkController.DELETE, "https://api.barid.site/inbox/" + id, "", _requestNetwork_request_listener);
+					requestNetwork.startRequestNetwork(RequestNetworkController.DELETE, "https://api.driftz.net/inbox/" + id, "", _requestNetwork_request_listener);
 				}
 			}
 		});

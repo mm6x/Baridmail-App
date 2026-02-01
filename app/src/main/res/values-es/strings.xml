@@ -12,12 +12,12 @@
     <string name="language_title">Idioma</string>
     <string name="about_title">Acerca de</string>
     <string name="visit">Visitar</string>
-    <string name="version_text">Versión: v0.2</string>
+    <string name="version_text">Versión: v0.4</string>
     <string name="theme_light">Modo Claro</string>
     <string name="theme_dark">Modo Oscuro</string>
     <string name="dialog_clear_title">Vaciar bandeja</string>
     <string name="dialog_clear_msg">¿Borrar todos los correos?</string>
-    <string name="dialog_delete">Borrar todo</string>
+    <string name="dialog_delete">Borrar todo</
     <string name="dialog_cancel">Cancelar</string>
     <string name="error_parsing">Error al analizar</string>
     <string name="error_opening">Error al abrir</string>

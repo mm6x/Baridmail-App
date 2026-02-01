@@ -64,11 +64,11 @@ public class Main2Activity extends AppCompatActivity {
 		setupUI();
 		
 		// Fetch Dynamic Domains
-		requestNetwork.startRequestNetwork(RequestNetworkController.GET, "https://api.barid.site/domains", "domains", _requestNetwork_request_listener);
+		requestNetwork.startRequestNetwork(RequestNetworkController.GET, "https://api.driftz.net/domains", "domains", _requestNetwork_request_listener);
 	}
 	
 	private void setupDomains() {
-		domains.add("@barid.site");
+		domains.add("@driftz.net");
 		domains.add("@vwh.sh");
 		domains.add("@iusearch.lol");
 		domains.add("@lifetalk.us");
@@ -158,7 +158,7 @@ public class Main2Activity extends AppCompatActivity {
 					checkReq.setHeaders(headers);
 				}
 
-				checkReq.startRequestNetwork(RequestNetworkController.GET, "https://api.barid.site/emails/" + fullAddress + "?limit=1", "final_check", new RequestNetwork.RequestListener() {
+				checkReq.startRequestNetwork(RequestNetworkController.GET, "https://api.driftz.net/emails/" + fullAddress + "?limit=1", "final_check", new RequestNetwork.RequestListener() {
 					@Override
 					public void onResponse(String tag, String response, HashMap<String, Object> headers) {
 						binding.btnLogin.setEnabled(true);
@@ -226,7 +226,7 @@ public class Main2Activity extends AppCompatActivity {
 		
 		String fullAddress = email + selectedItem.toString();
 		RequestNetwork statusCheck = new RequestNetwork(this);
-		statusCheck.startRequestNetwork(RequestNetworkController.GET, "https://api.barid.site/emails/" + fullAddress + "?limit=1", "status_check", new RequestNetwork.RequestListener() {
+		statusCheck.startRequestNetwork(RequestNetworkController.GET, "https://api.driftz.net/emails/" + fullAddress + "?limit=1", "status_check", new RequestNetwork.RequestListener() {
 			@Override
 			public void onResponse(String tag, String response, HashMap<String, Object> headers) {
 				try {

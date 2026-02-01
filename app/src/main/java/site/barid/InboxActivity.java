@@ -114,7 +114,7 @@ public class InboxActivity extends AppCompatActivity {
 				if (currentAccount != null) {
 					String fullAddress = currentAccount.get("address").toString();
 					setPasswordHeader(listRequest); // Set password header before request
-					listRequest.startRequestNetwork(RequestNetworkController.GET, "https://api.barid.site/emails/".concat(fullAddress.concat("?limit=20")), fullAddress, listRequest_listener);
+					listRequest.startRequestNetwork(RequestNetworkController.GET, "https://api.driftz.net/emails/".concat(fullAddress.concat("?limit=20")), fullAddress, listRequest_listener);
 				} else {
 					binding.swiperefreshlayout1.setRefreshing(false);
 				}
@@ -320,7 +320,7 @@ public class InboxActivity extends AppCompatActivity {
 			getIntent().putExtra("spinnerValue", domainPart);
 			
 			setPasswordHeader(listRequest);
-			listRequest.startRequestNetwork(RequestNetworkController.GET, "https://api.barid.site/emails/".concat(fullAddress.concat("?limit=20")), fullAddress, listRequest_listener);
+			listRequest.startRequestNetwork(RequestNetworkController.GET, "https://api.driftz.net/emails/".concat(fullAddress.concat("?limit=20")), fullAddress, listRequest_listener);
 		} else {
 			Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
 			startActivity(intent);
@@ -366,13 +366,13 @@ public class InboxActivity extends AppCompatActivity {
 					@Override
 					public void onClick(View v) {
 						String currentEmail = getIntent().getStringExtra("email") + getIntent().getStringExtra("spinnerValue");
-						listRequest.startRequestNetwork(RequestNetworkController.DELETE, "https://api.barid.site/emails/" + currentEmail, "", new RequestNetwork.RequestListener() {
+						listRequest.startRequestNetwork(RequestNetworkController.DELETE, "https://api.driftz.net/emails/" + currentEmail, "", new RequestNetwork.RequestListener() {
 							@Override
 							public void onResponse(String tag, String response, HashMap<String, Object> headers) {
 								AppUtil.showIOSDialog(InboxActivity.this, "Success", getString(R.string.success_cleared));
 								// Refresh list
 								String currentFullAddress = getIntent().getStringExtra("email") + getIntent().getStringExtra("spinnerValue");
-								listRequest.startRequestNetwork(RequestNetworkController.GET, "https://api.barid.site/emails/".concat(currentFullAddress.concat("?limit=20")), currentFullAddress, listRequest_listener);
+								listRequest.startRequestNetwork(RequestNetworkController.GET, "https://api.driftz.net/emails/".concat(currentFullAddress.concat("?limit=20")), currentFullAddress, listRequest_listener);
 								dialog.dismiss();
 							}
 							@Override
@@ -509,7 +509,7 @@ public class InboxActivity extends AppCompatActivity {
 					}
 					
 					setPasswordHeader(detailRequest);
-					detailRequest.startRequestNetwork(RequestNetworkController.GET, "https://api.barid.site/inbox/".concat(currentId), "A", detailRequest_listener);
+					detailRequest.startRequestNetwork(RequestNetworkController.GET, "https://api.driftz.net/inbox/".concat(currentId), "A", detailRequest_listener);
 				}
 			});
 			

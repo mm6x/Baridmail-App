@@ -67,7 +67,7 @@ public class EmailForegroundService extends Service {
 
                     for (HashMap<String, Object> account : accounts) {
                         String address = (String) account.get("address");
-                        String response = fetchUrl("https://api.barid.site/emails/" + address + "?limit=1");
+                        String response = fetchUrl("https://api.driftz.net/emails/" + address + "?limit=1");
                         JSONObject json = new JSONObject(response);
                         if (json.has("result")) {
                             JSONObject result = json.getJSONObject("result");
